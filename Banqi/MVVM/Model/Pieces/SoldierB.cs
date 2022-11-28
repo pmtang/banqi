@@ -11,6 +11,8 @@ namespace Banqi.MVVM.Model.Pieces
 
         public override string Name => "SoldierB";
 
+        public override string ImagePath => @"~/../../Data/Xiangqi_sd1.png";
+    
         public override int Rank => -1;
 
     }

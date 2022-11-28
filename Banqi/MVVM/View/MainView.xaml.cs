@@ -50,7 +50,7 @@ namespace Banqi
             }
 
             highlight = new Border();
-            highlight.BorderBrush= new SolidColorBrush(Colors.Green);
+            highlight.BorderBrush = new SolidColorBrush(Colors.Green);
             highlight.BorderThickness = new Thickness(5);
 
             Binding highlightRow = new Binding();
@@ -64,7 +64,7 @@ namespace Banqi
             highlight.SetBinding(Grid.RowProperty, highlightRow);
             highlight.SetBinding(Grid.ColumnProperty, highlightCol);
 
-            
+
         }
 
         private void OnBtnDoubleClick(object sender, MouseButtonEventArgs e)
@@ -76,12 +76,23 @@ namespace Banqi
 
                 if (mainViewModel.FlipPieceRequest(row, col))
                 {
+                    //// Version 1.0.0 with Name
+                    //Button button = (Button)sender;
+                    //Binding binding = new Binding();
+                    //binding.Path = new PropertyPath($"Board[{row}][{col}].Name");
+                    //binding.Mode = BindingMode.OneWay;
+                    //button.SetBinding(ContentProperty, binding);
+
+                    //button.Background = new SolidColorBrush(Colors.White);
+
                     Button button = (Button)sender;
                     Binding binding = new Binding();
-                    binding.Path = new PropertyPath($"Board[{row}][{col}].Name");
+                    binding.Path = new PropertyPath($"Board[{row}][{col}].ImagePath");
                     binding.Mode = BindingMode.OneWay;
-                    button.SetBinding(ContentProperty, binding);
 
+                    Image image = new Image();
+                    image.SetBinding(Image.SourceProperty, binding);
+                    button.Content = image;
                     button.Background = new SolidColorBrush(Colors.White);
                 }
             }
@@ -125,10 +136,19 @@ namespace Banqi
             Button button = (Button)sender;
             BindingOperations.ClearBinding(button, ContentProperty);
 
+            //// Version 1.0.0 with Name
+            //Binding binding = new Binding();
+            //binding.Path = new PropertyPath($"Board[{row}][{col}].Name");
+            //binding.Mode = BindingMode.OneWay;
+            //button.SetBinding(ContentProperty, binding);
+
             Binding binding = new Binding();
-            binding.Path = new PropertyPath($"Board[{row}][{col}].Name");
+            binding.Path = new PropertyPath($"Board[{row}][{col}].ImagePath");
             binding.Mode = BindingMode.OneWay;
-            button.SetBinding(ContentProperty, binding);
+
+            Image image = new Image();
+            image.SetBinding(Image.SourceProperty, binding);
+            button.Content = image;
         }
     }
 }

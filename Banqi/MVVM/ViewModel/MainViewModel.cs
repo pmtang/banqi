@@ -30,7 +30,11 @@ namespace Banqi.MVVM.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public bool FlipPieceRequest(int row, int col) => Setting.FlipPiece(row, col);
+        public bool FlipPieceRequest(int row, int col)
+        {
+            bool IsFlipped = Setting.FlipPiece(row, col);
+            return IsFlipped;
+        }
 
         public MoveState MovePieceRequest(int row, int col)
         {

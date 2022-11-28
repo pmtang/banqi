@@ -13,7 +13,8 @@ namespace Banqi.MVVM.Model
 
 
         public virtual bool Revealed { get; set; } = false;
-        public Uri ImageUri { get; set; } = new Uri("C:\\Users\\tangP\\source\\repos\\Banqi\\Banqi\\MVVM\\Data\\Xiangqi_General_Red.png");
+        //public Uri ImageUri { get; set; } = new Uri("C:\\Users\\tangP\\source\\repos\\Banqi\\Banqi\\MVVM\\Data\\Xiangqi_General_Red.png");
+        public virtual string ImagePath { get; } = @"";
 
         public Piece()
         {

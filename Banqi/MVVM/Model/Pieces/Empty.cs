@@ -10,7 +10,7 @@ namespace Banqi.MVVM.Model.Pieces
     {
         //public override string Name => "";
 
-        //public override int Rank => 0;
+        public override string ImagePath => @"~/../../Data/Xiangqi_nn1.png";
 
         public override bool Revealed => true;
     }

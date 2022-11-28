@@ -7,4 +7,55 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="MVVM\Data\Xiangqi_ad1.png" />
+    <None Remove="MVVM\Data\Xiangqi_al1.png" />
+    <None Remove="MVVM\Data\Xiangqi_cd1.png" />
+    <None Remove="MVVM\Data\Xiangqi_cl1.png" />
+    <None Remove="MVVM\Data\Xiangqi_ed1.png" />
+    <None Remove="MVVM\Data\Xiangqi_el1.png" />
+    <None Remove="MVVM\Data\Xiangqi_gd1.png" />
+    <None Remove="MVVM\Data\Xiangqi_gl1.png" />
+    <None Remove="MVVM\Data\Xiangqi_hd1.png" />
+    <None Remove="MVVM\Data\Xiangqi_hl1.png" />
+    <None Remove="MVVM\Data\Xiangqi_nn1.png" />
+    <None Remove="MVVM\Data\Xiangqi_rd1.png" />
+    <None Remove="MVVM\Data\Xiangqi_rl1.png" />
+    <None Remove="MVVM\Data\Xiangqi_sd1.png" />
+    <None Remove="MVVM\Data\Xiangqi_sl1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MVVM\Data\Xiangqi_ad1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_al1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_cd1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_cl1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_ed1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_el1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_gd1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_gl1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_hd1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_hl1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_nn1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_rd1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_rl1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_sd1.png" />
+    <Resource Include="MVVM\Data\Xiangqi_sl1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
