@@ -109,6 +109,14 @@ namespace Banqi.MVVM.Model
                                 // compare two ranks
                                 if ((Math.Abs(Board[FirstPiece.Item1][FirstPiece.Item2].Rank) >= Math.Abs(Board[SecondPiece.Item1][SecondPiece.Item2].Rank)) || (Math.Abs(Board[FirstPiece.Item1][FirstPiece.Item2].Rank) == 1 && Math.Abs(Board[SecondPiece.Item1][SecondPiece.Item2].Rank) == 7))
                                 {
+                                    // option rule: General cannot capture Soldat
+                                    if (Math.Abs(Board[FirstPiece.Item1][FirstPiece.Item2].Rank) == 7 && Math.Abs(Board[SecondPiece.Item1][SecondPiece.Item2].Rank) == 1)
+                                    {
+                                        FirstPiece = null;
+                                        SecondPiece = null;
+                                        return MoveState.Invalid;
+                                    }
+
                                     Board[SecondPiece.Item1][SecondPiece.Item2] = Board[FirstPiece.Item1][FirstPiece.Item2];
                                     Board[FirstPiece.Item1][FirstPiece.Item2] = new Empty();
                                     FirstPiece = null;
